@@ -1,0 +1,11 @@
+{% include "base.html" %}
+<div class="container">
+{% block content %}
+    <h1>Home Page</h1>
+    {% if user.is_authenticated %}
+        Hello {{request.user}}, welcome back.
+    {% else %}
+        This is a simple note website created with Django.
+    {% endif %}
+{% endblock %}
+</div>

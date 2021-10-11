@@ -1,0 +1,47 @@
+{% include "base.html" %}
+<div class="container">
+{% block content %}
+    {% if user.is_authenticated %}
+        <h2>Add a new note...</h2>
+        <br>
+        <form method="post" action="{% url 'note' %}">
+            <div class="form-group">
+                {% csrf_token %}
+                <input type="hidden" name="note_id" value="{{ note_id }}">
+                {{ form.title }}
+                <br>
+                {{ form.content }}
+                <br>
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        </form>
+
+        <hr>
+    <h2>Notes</h2>
+    <br>
+    {% if not user_note %}
+        You don't have any note!
+    {% endif %}
+
+    {% for note in user_note %}
+        {% if note.content != "" %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            {{ note.title }}
+            </div>
+            <div class="panel-body" style="white-space:pre;">{{ note.content }}</div>
+            <div class="panel-footer">
+                {{ note.create_date }}
+                <form action="/delete_note/{{ note.id }}" style="display: inline-block">
+                    <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this note?');">Delete</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+
+    {% else %}
+        please login.
+    {% endif %}
+{% endblock %}
+</div>

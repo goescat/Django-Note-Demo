@@ -1,0 +1,12 @@
+{% include "base.html" %}
+<div class="container">
+<h1>Sign up page</h1>
+
+<form method="post">
+    {% csrf_token %}
+    Username: {{ form.username }}<br><br>
+    Password: {{ form.password1 }}<br><br>
+    Password confirmation: {{ form.password2 }}<br><br>
+    <button type="submit" class="btn btn-success">Sign Up</button>
+</form>
+</div>

@@ -1,0 +1,13 @@
+[INFO][2021-10-11 13:50:47,260][views][3697]Get note form.
+[INFO][2021-10-11 13:50:47,261][views][3697]Get all user notes.
+[INFO][2021-10-11 13:50:47,261][views][3697]Get now order id.
+[INFO][2021-10-11 13:50:47,261][views][3697]Request method is GET, return note page.
+[INFO][2021-10-11 13:50:47,277][basehttp][3697]"GET /note/ HTTP/1.1" 200 2336
+[INFO][2021-10-11 13:50:49,604][basehttp][3697]"GET / HTTP/1.1" 200 968
+[INFO][2021-10-11 13:50:51,471][basehttp][3697]"GET / HTTP/1.1" 200 968
+[INFO][2021-10-11 13:50:52,332][basehttp][3697]"GET / HTTP/1.1" 200 968
+[INFO][2021-10-11 13:50:53,282][views][3697]Get note form.
+[INFO][2021-10-11 13:50:53,283][views][3697]Get all user notes.
+[INFO][2021-10-11 13:50:53,283][views][3697]Get now order id.
+[INFO][2021-10-11 13:50:53,283][views][3697]Request method is GET, return note page.
+[INFO][2021-10-11 13:50:53,293][basehttp][3697]"GET /note/ HTTP/1.1" 200 2336
