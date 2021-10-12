@@ -1,4 +1,4 @@
-# Django Note Demo
+# Simple DjangoNote
 A simple note site with Django. (Python 2.7, Django version 1.11)
 
 ## Demo
